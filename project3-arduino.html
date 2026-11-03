@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Reflection</title>
+    <link rel="stylesheet" href="project-1-website.css">
+    <style>
+        .dashboard-section {
+            width: 100%;
+            margin-top: 30px;
+            padding: 25px;
+            box-sizing: border-box;
+            background: rgba(20, 10, 14, 0.92);
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .dashboard-section h2 {
+            color: #e6a7b7;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+        }
+
+        @media (max-width: 650px) {
+            .dashboard-section {
+                padding: 20px;
+            }
+
+            .dashboard-frame {
+                height: 450px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="https://github.com/jeremy1234567891011121314151617181920/ct-portfolio">GitHub Profile</a>
+            <a href="credits.html">Credits</a>
+        </nav>
+    </header>
+
+    <main class="reflection-page">
+
+        <section class="introduction">
+            <h1>Project Reflection</h1>
+        </section>
+
+        <section class="reflection-box">
+
+            <section class="reflection-section">
+                <h2>Project Overview</h2>
+                <p>During Term 3, I created an Information Display, showing a live updating time, date, weather and a
+                    randomly selected quote. This was displayed on an Arduino Uno, a little screen that had to be
+                    connected to my laptop which processed the code I typed.</p>
+            </section>
+
+            <section class="reflection-section">
+                <h2>What Went Well</h2>
+                <p>One thing that went well was getting the Arduino and screen to successfully display the information I
+                    wanted, which in this case was the time, date, weather and quote. I was able to use Python script to
+                    send information to the Arduino through a USB serial connection. I also managed to change the
+                    layout, text size and positioning to my liking. This made the final display look cleaner and more
+                    organised, using a white background with navy text.</p>
+            </section>
+
+            <section class="reflection-section">
+                <h2>Challenges and Problem Solving</h2>
+                <p>There were also some difficult parts of the project. One main problem was getting the correct time to
+                    display. At one point during this task, the screen didn’t update the time, even though I followed
+                    the instructions set. I had to troubleshoot the Arduino and Python programs to find out what was
+                    causing the problem. This taught me to make sure old programs are stopped before testing new code.
+                </p>
+            </section>
+
+            <section class="reflection-section">
+                <h2>Design and Technical Challenges</h2>
+                <p>Another challenge was making everything fit properly on the screen. I had to adjust the text sizes
+                    and positions several time so the time, date, weather and quote were all visible. I also learned
+                    that some fonts do not support certain characters, which affected the Korean quotes I wanted to use.
+                </p>
+            </section>
+
+            <section class="reflection-section">
+                <h2>Skills and Final Evaluation</h2>
+                <p>Throughout this project, I learned how Python and Arduino can communicate with each other and how to
+                    control physical hardware. I also improved my debugging and problem solving skills by testing
+                    different solutions when something didn't work. Overall I am proud of my project because I was able
+                    to create a functioning Information Display and be able to have a broader understanding about how
+                    software and hardware work together.</p>
+            </section>
+
+        </section>
+
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #080808 0%, #303030 22%, #777777 42%, #eeeeee 58%, #702638 78%, #300813 100%);
+    background-attachment: fixed;
+}
+
+.site-header {
+    width: 100%;
+    padding: 20px 24px 0;
+    margin-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: 100%;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 14px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #e6a7b7;
+}
+
+.photos-page {
+    width: 100%;
+    margin: 0;
+    padding: 0 24px 40px;
+}
+
+.introduction {
+    width: 100%;
+    margin: 25px auto 35px;
+    padding: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.introduction h1 {
+    margin: 0 0 20px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.zoom-text {
+    transition: transform 0.3s ease;
+}
+
+.zoom-text:hover {
+    transform: scale(1.04);
+}
+
+.introduction p {
+    margin: 0;
+    color: white;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.photos-box {
+    width: 100%;
+    padding: 30px;
+    background: rgba(20, 10, 14, 0.92);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+}
+
+.photos-box h2 {
+    margin: 0 0 25px;
+    color: #e6a7b7;
+    font-size: 28px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.photo-item {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-4px);
+}
+
+.photo-item img {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.photo-item p {
+    margin: 0;
+    padding: 18px;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .site-header {
+        padding: 12px 10px 0;
+    }
+
+    .links {
+        gap: 18px;
+        padding: 15px 10px;
+    }
+
+    .photos-page {
+        padding: 0 10px 25px;
+    }
+
+    .introduction {
+        padding: 20px 12px;
+    }
+
+    .introduction h1 {
+        font-size: 30px;
+    }
+
+    .introduction p {
+        font-size: 16px;
+    }
+
+    .photos-box {
+        padding: 20px;
+    }
+
+    .photos-box h2 {
+        font-size: 24px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .photo-item img {
+        height: 280px;
+    }
+}

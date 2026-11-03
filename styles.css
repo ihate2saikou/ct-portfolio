@@ -1,98 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-image: linear-gradient(to right, #0088ff 0%, #00feed 100%);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background: linear-gradient(135deg,
+            #080808 0%,
+            #303030 22%,
+            #777777 42%,
+            #eeeeee 58%,
+            #702638 78%,
+            #300813 100%);
+
+    background-attachment: fixed;
 }
 
 .page-layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 25px;
 }
 
-header,
-footer {
-    display: flex;
-    justify-content: space-between;
+header {
+    margin-bottom: 30px;
 }
 
 .links {
     display: flex;
-    gap: 20px
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
 }
 
 .links a {
+    color: white;
     text-decoration: none;
-    color: blue;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .links a:hover {
-    text-decoration: underline;
-}
-
-
-
-.container {
-    display: flex;
-
-    border: 4px solid black;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: middle center;
-    text-align: left;
-    /* flex-wrap: wrap; */
-}
-
-.item {
-    width: 200px;
-    height: 200px;
-    background-color: orange;
-    font-size: 20px;
-    color: black;
-    font-family: sans-serif;
-    text-align: center;
-
-}
-
-.item:hover {
-    background: red;
-    transform: scale(1.05);
-}
-
-.social-logo {
-    width: 40px;
-    height: 40px;
-}
-
-
-main {
-    text-align: center;
+    color: #e6a7b7;
 }
 
 .circle {
-    height: 150px;
-    width: 150px;
-    display: flex;
-    background-color: #000;
+    display: block;
+    width: 125px;
+    height: 125px;
+    margin: 25px auto;
+
     border-radius: 50%;
-    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid white;
 
+    box-shadow: 0 0 20px rgba(112, 38, 56, 0.8);
 }
 
-h1 {
-    font-size: 50px;
-    color: black;
-    font-family: sans-serif;
+.introduction {
+    max-width: 800px;
+    margin: 35px auto 55px;
+    padding: 25px;
+
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
 }
 
-p {
-    font-size: 20px;
-    color: black;
-    font-family: 'Times New Roman', Times, serif
+.introduction h1 {
+    margin-bottom: 25px;
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px 8px black;
 }
 
-.dashboard-iframe {
-    width: 100%;
-    height: 600px;
+.zoom-text {
+    transition: transform 0.3s ease;
+}
+
+.zoom-text:hover {
+    transform: scale(1.04);
+}
+
+.introduction p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.project {
+    position: relative;
+    padding: 30px;
+
+    background: rgba(20, 10, 14, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    border-color: #e6a7b7;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.project-number {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    color: #e6a7b7;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.project a {
+    color: #e6a7b7;
+    text-decoration: none;
+}
+
+.project a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.project h3 {
+    margin: 0 0 15px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.project p {
+    margin: 0;
+    color: #eeeeee;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+
+    .page-layout {
+        padding: 15px;
+    }
+
+    .links {
+        gap: 20px;
+    }
+
+    .introduction {
+        padding: 20px;
+    }
+
+    .introduction h1 {
+        font-size: 30px;
+    }
+
+    .introduction p {
+        font-size: 16px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 22px;
+    }
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
 }
